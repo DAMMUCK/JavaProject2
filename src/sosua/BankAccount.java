@@ -20,7 +20,7 @@ public class BankAccount {
 	}
 	
 	public void printAcount() {
-		System.out.println("°èÁÂ : "+this.bankAccount+"   ÀÜ¾× : "+this.balance);
+		System.out.println("ê³„ì¢Œ : "+this.bankAccount+"    : "+this.balance);
 	}
 	
 
