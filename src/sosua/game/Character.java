@@ -6,6 +6,7 @@ public class Character {
 	private ArrayList<Item> mItem;
 	private ArrayList<Skill> mSkill;
 	
+	
 	private String name;
 	private String job;
 	private int level;
@@ -13,7 +14,7 @@ public class Character {
 	private int mp;
 	private long guid;
 	private int exp;
-	
+
 
 	Character(String name, String job,long guid) {
 		this.name=name;

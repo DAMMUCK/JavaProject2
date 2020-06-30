@@ -15,18 +15,13 @@ public class Item {
 		this.itemCount = itemCount;
 	}
 	
-	public void getItem() {
-		System.out.println(name+"아이템을 주웠습니다!");
-	}
-	
-	public void putItem() {
-		System.out.println(name+"아이템을 버렸습니다!");
-	}
-	
-	public void useItem() {
-		System.out.println(name+"아이템을 사용합니다!");
-	}
-
+	/*
+	 * public void getItem() { System.out.println(name+"아이템을 주웠습니다!"); }
+	 * 
+	 * public void putItem() { System.out.println(name+"아이템을 버렸습니다!"); }
+	 * 
+	 * public void useItem() { System.out.println(name+"아이템을 사용합니다!"); }
+	 */
 	public String getName() {
 		return name;
 	}
