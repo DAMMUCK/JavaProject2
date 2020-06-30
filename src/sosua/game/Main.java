@@ -32,7 +32,7 @@ public class Main {
 			if(name.equals(i.getName())) {	
 				System.out.println("이미 존재하는 이름입니다!");
 				return false;	
-			}else if(guid == i.getGuid()) {	
+			}if(guid == i.getGuid()) {	
 				System.out.println("이미 존재하는 guid입니다.");
 				return false;	
 			}
