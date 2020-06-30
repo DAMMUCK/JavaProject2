@@ -9,20 +9,22 @@ public class Character {
 	private String name;
 	private String job;
 	private int level;
-	private String guild;
 	private int hp;
 	private int mp;
+	private long guid;
+	private int exp;
 	
 
-	Character(String name, String job, String guild) {
+	Character(String name, String job,long guid) {
 		this.name=name;
 		this.job=job;
 		this.level=1;
-		this.guild=guild;
 		this.hp=100;
 		this.mp=100;
 		this.mItem = new ArrayList<Item>();
 		this.mSkill = new ArrayList<Skill>();
+		this.guid=guid;
+		this.exp=0;
 	}
 
 	
@@ -51,14 +53,6 @@ public class Character {
 		this.level = level;
 	}
 
-	public String getGuild() {
-		return guild;
-	}
-
-	public void setGuild(String guild) {
-		this.guild = guild;
-	}
-	
 	public int getHp() {
 		return hp;
 	}
@@ -95,6 +89,26 @@ public class Character {
 
 	public void setmSkill(ArrayList<Skill> mSkill) {
 		this.mSkill = mSkill;
+	}
+
+
+	public long getGuid() {
+		return guid;
+	}
+
+
+	public void setGuid(long guid) {
+		this.guid = guid;
+	}
+
+
+	public int getExp() {
+		return exp;
+	}
+
+
+	public void setExp(int exp) {
+		this.exp = exp;
 	}
 	
 

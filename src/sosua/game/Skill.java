@@ -10,6 +10,10 @@ public class Skill {
 		this.attackVolume=attackVolume;
 		this.mpConsum=mpConsum;
 	}
+	
+	public void useSkill() {
+		System.out.println(name+"스킬을 사용합니다!");
+	}
 
 	public String getName() {
 		return name;
