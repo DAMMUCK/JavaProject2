@@ -1,4 +1,4 @@
-package sosua;
+package sosua.bank;
 
 public class Triangle {
 	private int length_1=0;

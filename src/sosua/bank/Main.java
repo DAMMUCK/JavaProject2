@@ -1,4 +1,4 @@
-package sosua;
+package sosua.bank;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package sosua;
+package sosua.bank;
 
 public class BankAccount {
 	private String bankAccount="";
