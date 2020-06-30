@@ -19,13 +19,21 @@ public class Main {
 	
 	}
 	
+	/*
+	 * public String choiceJob() { int choice =0; String job="";
+	 * System.out.println("1| 검사 2| 힐러 3| 암살자 4| 궁사 "); System.out.print("직업입력 : ");
+	 * if(choice == 1) {job = "검사";} else if(choice == 2) {job = "힐러";} else
+	 * if(choice == 3) {job = "암살자"; } else if(choice == 4) {job = "궁사";} return
+	 * job; }
+	 */	
 	public boolean createCharacter() {
 		String name, job;
 		long guid;
 		System.out.print("이름입력 : ");
 		name=scan.next();
 		System.out.print("직업입력 : ");
-		job = scan.next();
+		job=scan.next();
+		//job = choiceJob();
 		System.out.println("guid입력 : ");
 		guid=scan.nextLong();
 		for(Character i : charList) {
@@ -42,20 +50,27 @@ public class Main {
 		return true;
 	}
 	
-	public boolean 
+	public void viewInfoChar() {
+		if(charList.size()==0) {System.out.println("생성된 캐릭터가 없습니다! 캐릭터를 생성해주세요");}
+		for(Character c : charList) {
+			c.viewInfo();
+		}
+	}
 	
 	
 	public void run() {
 		boolean roop=true;
 		int choice=0;
 		while(roop) {
+			printMenu();
+			System.out.print("입력 : ");
 			choice = scan.nextInt();
 			if(choice==1) {
 				if(createCharacter()==true) {
-					System.out.println("< 캐릭터 생성 >");
+					System.out.println("** 캐릭터가 생성되었습니다!! **");
 				}
 			}
-			else if(choice==2) {}
+			else if(choice==2) {viewInfoChar();}
 			else if(choice==3) {roop=false;}
 		}
 	}

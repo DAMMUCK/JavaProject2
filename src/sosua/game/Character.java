@@ -26,6 +26,14 @@ public class Character {
 		this.guid=guid;
 		this.exp=0;
 	}
+	
+	
+	public void viewInfo() {
+		System.out.println("----------------------------------------------------------------------------------------------");
+		System.out.println("| 레벨 : "+level+" | 이름 : "+name+" | 직업 : "+job+" | HP : "+hp+" | MP : "+
+							mp+" | EXP : "+exp+" | GUID : "+guid);
+		System.out.println("----------------------------------------------------------------------------------------------");
+	}
 
 	
 //Getter Setter==================================================
