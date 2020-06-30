@@ -42,13 +42,19 @@ public class Main {
 		return true;
 	}
 	
+	public boolean 
+	
 	
 	public void run() {
 		boolean roop=true;
 		int choice=0;
 		while(roop) {
 			choice = scan.nextInt();
-			if(choice==1) {createCharacter();}
+			if(choice==1) {
+				if(createCharacter()==true) {
+					System.out.println("< 캐릭터 생성 >");
+				}
+			}
 			else if(choice==2) {}
 			else if(choice==3) {roop=false;}
 		}
