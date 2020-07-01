@@ -34,7 +34,7 @@ public class Character {
 	
 	public void viewInfo() {
 		System.out.println("----------------------------------------------------------------------------------------------");
-		System.out.println("| ·¹º§ : "+level+" | ÀÌ¸§ : "+name+" | Á÷¾÷ : "+job+" | HP : "+hp+" | MP : "+
+		System.out.println("| ë ˆë²¨ : "+level+" | ì´ë¦„ : "+name+" | ì§ì—… : "+job+" | HP : "+hp+" | MP : "+
 							mp+" | EXP : "+exp+" | GUID : "+guid);
 		System.out.println("----------------------------------------------------------------------------------------------");
 	}
