@@ -3,6 +3,7 @@ package sosua.game;
 import java.util.ArrayList;
 
 public class Character {
+	
 	private ArrayList<Item> Items;
 	private ArrayList<Skill> Skills;
 	
@@ -12,23 +13,29 @@ public class Character {
 	private int level;
 	private int hp;
 	private int mp;
-	private long guid;
+	private long guid=100000L;
 	private int exp;
 	
 	private ItemManager ItemManager;
 
 
-	Character(String name, String job,long guid) {
+	Character(String name, String job) {
 		this.Items = new ArrayList<Item>();
 		this.Skills = new ArrayList<Skill>();
 		this.name=name;
 		this.job=job;
-		this.guid=guid;
+		this.guid=getGUID();
 		this.level=1;
 		this.hp=100;
 		this.mp=100;
 		this.exp=0;
 		initItems();
+	}
+	
+
+	public long getGUID() {
+		this.guid +=1;
+		return guid;
 	}
 	
 	

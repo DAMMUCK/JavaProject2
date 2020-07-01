@@ -22,21 +22,17 @@ public class Main {
 	
 	public boolean createCharacter() {
 		String name, job;
-		long guid;
 		System.out.print("이름입력 : ");
 		name=scan.next();
 		System.out.print("직업입력 : ");
 		job=scan.next();
-		//job = choiceJob();
-		System.out.println("guid입력 : ");
-		guid=scan.nextLong();
 		for(Character i : charList) {
 			if(name.equals(i.getName())) {	
 				System.out.println("이미 존재하는 이름입니다!");
 				return false;	
 			}
 		}
-		Character character = new Character(name,job,guid);
+		Character character = new Character(name,job);
 		charList.add(character);
 		return true;
 	}
