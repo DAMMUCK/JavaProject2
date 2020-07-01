@@ -4,15 +4,17 @@ public class Skill {
 	private String name;
 	private int attackVolume;
 	private int mpConsum;
-	
-	Skill(String name, int attackVolume,int mpConsum){
-		this.name=name;
-		this.attackVolume=attackVolume;
-		this.mpConsum=mpConsum;
+	private int skillCode;
+
+	Skill(String name, int skillCode, int attackVolume, int mpConsum) {
+		this.name = name;
+		this.skillCode = skillCode;
+		this.attackVolume = attackVolume;
+		this.mpConsum = mpConsum;
 	}
-	
-	public void useSkill() {
-		System.out.println(name+"스킬을 사용합니다.");
+
+	public static Skill createSkill(String name, int skillCode, int attackVolume, int mpConsum) {
+		return new Skill(name, skillCode, attackVolume, mpConsum);
 	}
 
 	public String getName() {
