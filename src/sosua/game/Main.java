@@ -16,16 +16,10 @@ public class Main {
 	public void printMenu() {
 		System.out.println("1.캐릭터 생성");
 		System.out.println("2.캐릭터 정보창보기");
-	
+		System.out.println("3.종료");
 	}
 	
-	/*
-	 * public String choiceJob() { int choice =0; String job="";
-	 * System.out.println("1| 검사 2| 힐러 3| 암살자 4| 궁사 "); System.out.print("직업입력 : ");
-	 * if(choice == 1) {job = "검사";} else if(choice == 2) {job = "힐러";} else
-	 * if(choice == 3) {job = "암살자"; } else if(choice == 4) {job = "궁사";} return
-	 * job; }
-	 */	
+	
 	public boolean createCharacter() {
 		String name, job;
 		long guid;
@@ -39,9 +33,6 @@ public class Main {
 		for(Character i : charList) {
 			if(name.equals(i.getName())) {	
 				System.out.println("이미 존재하는 이름입니다!");
-				return false;	
-			}if(guid == i.getGuid()) {	
-				System.out.println("이미 존재하는 guid입니다.");
 				return false;	
 			}
 		}

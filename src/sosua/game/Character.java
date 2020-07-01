@@ -34,13 +34,17 @@ public class Character {
 	
 	public void viewInfo() {
 		System.out.println("----------------------------------------------------------------------------------------------");
-		System.out.println("| Î†àÎ≤® : "+level+" | Ïù¥Î¶Ñ : "+name+" | ÏßÅÏóÖ : "+job+" | HP : "+hp+" | MP : "+
+		System.out.println("| ∑π∫ß : "+level+" | ¿Ã∏ß : "+name+" | ¡˜æ˜ : "+job+" | HP : "+hp+" | MP : "+
 							mp+" | EXP : "+exp+" | GUID : "+guid);
 		System.out.println("----------------------------------------------------------------------------------------------");
 	}
 
 	private void initItems() {
 		createItem(ItemDef.SWORD,1);
+		createItem(ItemDef.HEAL_POSITION,3);
+		createItem(ItemDef.DIRTY_PANTS,1);
+		createItem(ItemDef.DIRTY_SHOES,1);
+		createItem(ItemDef.BASIC_ARMOR,1);
 	}
 	
 	public boolean createItem(int itemCode,int itemCount) {
