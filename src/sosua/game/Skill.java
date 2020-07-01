@@ -12,7 +12,7 @@ public class Skill {
 	}
 	
 	public void useSkill() {
-		System.out.println(name+"½ºÅ³À» »ç¿ëÇÕ´Ï´Ù!");
+		System.out.println(name+"ìŠ¤í‚¬ì„ ");
 	}
 
 	public String getName() {
