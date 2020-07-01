@@ -14,6 +14,8 @@ public class Character {
 	private int mp;
 	private long guid;
 	private int exp;
+	
+	private ItemManager ItemManager;
 
 
 	Character(String name, String job,long guid) {
@@ -26,6 +28,7 @@ public class Character {
 		this.hp=100;
 		this.mp=100;
 		this.exp=0;
+		initItems();
 	}
 	
 	
@@ -37,7 +40,7 @@ public class Character {
 	}
 
 	private void initItems() {
-		creteItem(ItemDef.SWORD,1);
+		createItem(ItemDef.SWORD,1);
 	}
 	
 	public boolean createItem(int itemCode,int itemCount) {
@@ -55,7 +58,7 @@ public class Character {
 	}
 
 	public String getJob() {
-		return job;
+		return this.job;
 	}
 
 	public void setJob(String job) {

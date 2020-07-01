@@ -1,12 +1,12 @@
 package sosua.game;
 
 import java.util.HashMap;
-import java.util.Map;
+
 
 public class ItemManager {
 	private long currentGUID = 10000000000000L;
 	
-	private HashMap itemMap = new HashMap();
+	private HashMap<Integer, String> itemMap = new HashMap<Integer, String>();
 	
 	public ItemManager() {
 		initItems();
