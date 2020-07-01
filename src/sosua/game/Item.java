@@ -2,40 +2,28 @@ package sosua.game;
 
 public class Item {
 	private String name;
-	private int buff;
 	private int itemCode;
 	private int itemCount;
 	private long guid;
 	
-	Item(String name,int buff,int itemCode, int guid, int itemCount){
+	Item(String name,int itemCode, long guid, int itemCount){
 		this.name=name;
-		this.buff = buff;
 		this.guid=guid;
 		this.itemCode=itemCode;
 		this.itemCount = itemCount;
 	}
 	
-	/*
-	 * public void getItem() { System.out.println(name+"아이템을 주웠습니다!"); }
-	 * 
-	 * public void putItem() { System.out.println(name+"아이템을 버렸습니다!"); }
-	 * 
-	 * public void useItem() { System.out.println(name+"아이템을 사용합니다!"); }
-	 */
+	public static Item createItem(String name, int itemCode, long guid, int itemCount) {
+		return new Item(name,itemCode,guid,itemCount);
+	}
+	
+	
 	public String getName() {
 		return name;
 	}
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public int getBuff() {
-		return buff;
-	}
-
-	public void setBuff(int buff) {
-		this.buff = buff;
 	}
 
 	public int getItemCode() {

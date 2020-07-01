@@ -3,8 +3,8 @@ package sosua.game;
 import java.util.ArrayList;
 
 public class Character {
-	private ArrayList<Item> mItem;
-	private ArrayList<Skill> mSkill;
+	private ArrayList<Item> Items;
+	private ArrayList<Skill> Skills;
 	
 	
 	private String name;
@@ -17,14 +17,14 @@ public class Character {
 
 
 	Character(String name, String job,long guid) {
+		this.Items = new ArrayList<Item>();
+		this.Skills = new ArrayList<Skill>();
 		this.name=name;
 		this.job=job;
+		this.guid=guid;
 		this.level=1;
 		this.hp=100;
 		this.mp=100;
-		this.mItem = new ArrayList<Item>();
-		this.mSkill = new ArrayList<Skill>();
-		this.guid=guid;
 		this.exp=0;
 	}
 	
@@ -36,6 +36,14 @@ public class Character {
 		System.out.println("----------------------------------------------------------------------------------------------");
 	}
 
+	private void initItems() {
+		creteItem(ItemDef.SWORD,1);
+	}
+	
+	public boolean createItem(int itemCode,int itemCount) {
+		Items.add(ItemManager.createItem(itemCode,itemCount));
+		return true;
+	}
 	
 //Getter Setter==================================================
 	public String getName() {
@@ -81,26 +89,6 @@ public class Character {
 	}
 
 
-	public ArrayList<Item> getmItem() {
-		return mItem;
-	}
-
-
-	public void setmItem(ArrayList<Item> mItem) {
-		this.mItem = mItem;
-	}
-
-
-	public ArrayList<Skill> getmSkill() {
-		return mSkill;
-	}
-
-
-	public void setmSkill(ArrayList<Skill> mSkill) {
-		this.mSkill = mSkill;
-	}
-
-
 	public long getGuid() {
 		return guid;
 	}
@@ -119,6 +107,27 @@ public class Character {
 	public void setExp(int exp) {
 		this.exp = exp;
 	}
+
+
+	public ArrayList<Item> getItems() {
+		return Items;
+	}
+
+
+	public void setItems(ArrayList<Item> items) {
+		Items = items;
+	}
+
+
+	public ArrayList<Skill> getSkills() {
+		return Skills;
+	}
+
+
+	public void setSkills(ArrayList<Skill> skills) {
+		Skills = skills;
+	}
+	
 	
 
 }
