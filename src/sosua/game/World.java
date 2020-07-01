@@ -3,13 +3,13 @@ package sosua.game;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class World {
 	Scanner scan = new Scanner(System.in);
 	private ArrayList<Character> charList = new ArrayList<Character>();
 	
 	
 	public static void main(String[] arg) {
-		Main main = new Main();
+		World main = new World();
 		main.run();
 	}
 	
