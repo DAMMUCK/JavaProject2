@@ -12,7 +12,7 @@ public class Skill {
 	}
 	
 	public void useSkill() {
-		System.out.println(name+"스킬을 ");
+		System.out.println(name+"스킬을 사용합니다.");
 	}
 
 	public String getName() {
