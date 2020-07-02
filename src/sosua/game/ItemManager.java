@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class ItemManager {
 	private long currentGUID = 10000000000000L;
 	
-	private HashMap<Integer, String> itemMap = new HashMap<Integer, String>();
+	private HashMap itemMap = new HashMap();
 	
 	public ItemManager() {
 		initItems();

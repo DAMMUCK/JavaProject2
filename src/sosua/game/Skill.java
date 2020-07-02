@@ -40,4 +40,12 @@ public class Skill {
 	public void setMpConsum(int mpConsum) {
 		this.mpConsum = mpConsum;
 	}
+
+	public int getSkillCode() {
+		return skillCode;
+	}
+
+	public void setSkillCode(int skillCode) {
+		this.skillCode = skillCode;
+	}
 }

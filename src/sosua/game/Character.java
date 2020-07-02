@@ -12,18 +12,20 @@ public class Character {
 	private int level;
 	private int hp;
 	private int mp;
-	private long guid = 100000L;
+	private long guid;
 	private int exp;
 
 	private ItemManager ItemManager;
 	private SkillManager SkillManager;
 
-	Character(String name, String job) {
+	Character(String name, String job, long guid) {
+		ItemManager = new ItemManager();
+		SkillManager = new SkillManager();
 		this.Items = new ArrayList<Item>();
 		this.Skills = new ArrayList<Skill>();
 		this.name = name;
 		this.job = job;
-		this.guid = getGUID();
+		this.guid = guid;
 		this.level = 1;
 		this.hp = 100;
 		this.mp = 100;
@@ -32,10 +34,18 @@ public class Character {
 		initSkills();
 	}
 
-	public long getGUID() {
-		this.guid += 1;
-		return guid;
+	public static Character createChar(String name, String job, long guid) {
+		return new Character(name, job, guid);
 	}
+
+	/*
+	 * public boolean createChar(String name, String job) {
+	 * CharacterManager.createChar(name, job); return true; }
+	 */
+
+	///// 다음시간에 오면 해야할 것
+	// 캐릭터형 매니저를 만들어서 캐릭터를 생성할 것 위의 함수 고쳐야 한다
+	// 로직 다시 정리하고 생각하고 만들것
 
 	public void viewInfo() {
 		System.out.println(
@@ -55,16 +65,20 @@ public class Character {
 	}
 
 	public boolean createItem(int itemCode, int itemCount) {
-		Items.add(ItemManager.createItem(itemCode, itemCount));
+		Item item = ItemManager.createItem(itemCode, itemCount);
+		Items.add(item);
 		return true;
 	}
 
 	private void initSkills() {
-
+		createSkill(SkillDef.MAGIC_SHIELD, 0, 10);
+		createSkill(SkillDef.DASH, 0, 10);
+		createSkill(SkillDef.DARK_IMPALE, 20, 15);
 	}
 
 	public boolean createSkill(int skillCode, int attackVolum, int mpConsum) {
-		Skills.add(SkillManager.createSkill(skillCode, attackVolum, mpConsum));
+		Skill skill = SkillManager.createSkill(skillCode, attackVolum, mpConsum);
+		Skills.add(skill);
 		return true;
 	}
 

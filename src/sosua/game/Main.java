@@ -3,16 +3,14 @@ package sosua.game;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class World {
+public class Main {
 	Scanner scan = new Scanner(System.in);
 	private ArrayList<Character> charList = new ArrayList<Character>();
-
-	// 캐릭터 이름 중복 안됨
-	// 캐릭터 guid를 관리하는 캐릭터 CManager만들기
+	private CharacterManager CharacterManager = new CharacterManager();
 
 	public static void main(String[] arg) {
-		World world = new World();
-		world.run();
+		Main main = new Main();
+		main.run();
 	}
 
 	public void printMenu() {
@@ -34,7 +32,7 @@ public class World {
 				return false;
 			}
 		}
-		Character character = new Character(name, job);
+		Character character = CharacterManager.createChar(name, job);
 		charList.add(character);
 		return true;
 	}
